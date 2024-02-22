@@ -1,0 +1,37 @@
+/* CSS untuk Container */
+.container {
+  margin-top: 20px;
+}
+
+/* CSS untuk Tabel */
+.table-container {
+  max-height: 400px; /* Atur tinggi maksimum */
+  overflow-y: auto; /* Hanya izinkan scroll vertikal */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  position: sticky; /* Mengatur posisi elemen */
+  top: 0; /* Menempatkannya di bagian atas */
+  background-color: #f0f0f0; /* Warna latar belakang untuk kolom nama */
+  z-index: 2; /* Mengatur indeks z agar tetap di atas konten tabel */
+}
+
+.table-container thead th:first-child {
+  left: 0; /* Tetapkan nama kolom pertama pada posisi awal */
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
