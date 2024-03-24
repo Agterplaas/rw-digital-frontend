@@ -27,7 +27,7 @@ const navbarItems: NavbarItemsInterface[] = [
 
 function Navbar() {
   return (
-    <div className="fixed top-0 z-[9999] flex h-24 w-full items-center justify-between bg-gray-50 px-5 py-1">
+    <div className="fixed top-0 z-[9999] flex h-24 w-full items-center justify-between bg-base px-5 py-1">
       <section className="flex items-center gap-4">
         <div className="flex h-full items-center after:ml-4 after:block after:h-[60px] after:w-[2px] after:bg-neutral-500">
           <img src={logo} alt="rukun warga logo" className="w-[74px]" />
