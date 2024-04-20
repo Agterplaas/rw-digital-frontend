@@ -11,13 +11,16 @@ type PropsType = {
 };
 
 function FormFilter({ formFilter, setFormFilter }: PropsType) {
-  const handleInputChange = (key: keyof FormFilterInterface, event: ChangeEvent<HTMLInputElement> | DropdownChangeEvent) => {
+  const handleInputChange = (
+    key: keyof FormFilterInterface,
+    event: ChangeEvent<HTMLInputElement> | DropdownChangeEvent
+  ): void => {
     const value = event.target.value;
     setFormFilter((formFilter) => ({ ...formFilter, [key]: value }));
   };
 
   return (
-    <div className="grid grid-cols-2 grid-rows-6 gap-x-52 gap-y-6">
+    <div className="grid grid-cols-[repeat(2,_500px)] grid-rows-6 justify-between gap-y-6">
       <div className="grid grid-cols-[150px_minmax(0,_1fr)] items-center">
         <label htmlFor="">Status Sosial</label>
         <Dropdown

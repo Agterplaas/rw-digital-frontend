@@ -11,7 +11,12 @@ type PropsType = {
 };
 
 const home: MenuItem = {
-  icon: <Icon icon="ic:round-home" className="h-5 w-5" />,
+  icon: (
+    <Icon
+      icon="ic:round-home"
+      className="h-5 w-5"
+    />
+  ),
   url: '/admin'
 };
 
@@ -37,10 +42,11 @@ function AdminPage({ children }: PropsType) {
       <Navbar />
       <div className="absolute top-24 flex h-[calc(100vh-6rem)] w-screen gap-20 overflow-x-hidden pr-20">
         <Sidebar />
-        <section className="flex w-full flex-col gap-5 py-4">
+        <section className="w-full">
           <BreadCrumb
             model={menuItems}
             home={home}
+            ptOptions={{ mergeProps: true }}
             pt={{ root: { className: 'border-none' }, label: { className: 'capitalize' } }}
           />
           <div className="w-full rounded-md bg-base p-10">{children}</div>
